@@ -1,0 +1,15 @@
+if (isDateValid())
+            displayManager.showSearchResultScreen();
+        else 
+            JOptionPane.showMessageDialog(null,"Bookings are available from:\n1st Oct, 16 till 13th Nov, 16",
+                    "Warning!", JOptionPane.WARNING_MESSAGE);
+
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {                                   
+        Object[] options = {"Yes","No"};
+        int confirm = JOptionPane.showOptionDialog(null, "Thank you for flying with us!\nAre you sure you want to exit?", "Exit", 
+                JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (confirm == 0) {
+           System.exit(0);
+        }
+    }
